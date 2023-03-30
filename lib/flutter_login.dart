@@ -274,7 +274,7 @@ class FlutterLogin extends StatefulWidget {
     this.title,
 
     /// The [ImageProvider] or asset path [String] for the logo image to be displayed
-    dynamic logo,
+    this.logo,
     this.messages,
     this.theme,
     this.userValidator,
