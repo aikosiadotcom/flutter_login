@@ -538,8 +538,6 @@ class _FlutterLoginState extends State<FlutterLogin>
     return theme.copyWith(
       primaryColor: primaryColor,
       primaryColorDark: primaryColorDark,
-      accentColor: accentColor,
-      errorColor: errorColor,
       cardTheme: theme.cardTheme.copyWith(
         clipBehavior: cardTheme.clipBehavior,
         color: cardTheme.color ?? theme.cardColor,
@@ -601,6 +599,7 @@ class _FlutterLoginState extends State<FlutterLogin>
         subtitle1: textFieldStyle,
         button: buttonStyle,
       ),
+      colorScheme: Theme.of(context).colorScheme.copyWith(secondary:accentColor).copyWith(error:errorColor),
     );
   }
 
