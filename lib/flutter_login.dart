@@ -496,8 +496,8 @@ class _FlutterLoginState extends State<FlutterLogin>
     final primaryColorDark = primaryDarkShades.length >= 3
         ? primaryDarkShades[2]
         : primaryDarkShades.last;
-    final accentColor = loginTheme.accentColor ?? theme.accentColor;
-    final errorColor = loginTheme.errorColor ?? theme.errorColor;
+    final accentColor = loginTheme.accentColor ?? theme.colorScheme.secondary;
+    final errorColor = loginTheme.errorColor ?? theme.colorScheme.error;
     // the background is a dark gradient, force to use white text if detect default black text color
     final isDefaultBlackText = theme.textTheme.headline3!.color ==
         Typography.blackMountainView.headline3!.color;
@@ -587,7 +587,7 @@ class _FlutterLoginState extends State<FlutterLogin>
       ),
       floatingActionButtonTheme: theme.floatingActionButtonTheme.copyWith(
         backgroundColor: buttonTheme.backgroundColor ?? primaryColor,
-        splashColor: buttonTheme.splashColor ?? theme.accentColor,
+        splashColor: buttonTheme.splashColor ?? theme.colorScheme.secondary,
         elevation: buttonTheme.elevation ?? 4.0,
         highlightElevation: buttonTheme.highlightElevation ?? 2.0,
         shape: buttonTheme.shape ?? StadiumBorder(),
