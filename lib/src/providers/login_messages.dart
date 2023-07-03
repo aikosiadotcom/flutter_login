@@ -35,7 +35,7 @@ class LoginMessages with ChangeNotifier {
   static const defaultflushbarTitleSuccess = 'Success';
   static const defaultflushbarTitleError = 'Error';
   static const defaultSignUpSuccess = 'An activation link has been sent';
-  static const defaultProvidersTitle = 'or login with';
+  static const defaultProvidersTitle = 'Switch Server or Database';
 
   /// Hint text of the userHint [TextField]
   /// By default is Email
